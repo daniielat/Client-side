@@ -15,7 +15,7 @@ require('../../mocks');
 /**
  * Routers
  */
-
+const clase = require('../pages/clase');
 
 /**
  * Use global middlewares
@@ -24,11 +24,12 @@ router.use(layoutMiddleware());
 router.use(i18nMiddleware(config.i18n));
 router.use(polyfillsMiddleware(config.polyfillLimits));
 
+
 /**
  * Redirect
  */
 router.get('/', (req, res) => res.redirect(`${config.ragnar.basePath}products`));
-
+router.use('/clase', clase);
 /**
  * Mount routers
  */
