@@ -3,6 +3,7 @@ const View = require('./view');
 
 
 
+
 exports.render = function render(req, res) {
 
     const Clase = props => <View {...props} />

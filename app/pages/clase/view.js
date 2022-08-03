@@ -2,6 +2,7 @@ const React = require('react');
 const Script = require('nordic/script');
 const serialize = require('serialize-javascript');
 
+
 function View(props) {
     const { message } = props; // Para el server side rendering
     const [count, setCount] = React.useState(0)
