@@ -35,7 +35,7 @@ describe('OPCIONAL: manejo de error de getProducts', () => {
     });
 });
 
-xdescribe('Ejercitación Integradora - productsService', () => {
+describe('Ejercitación Integradora - productsService', () => {
     beforeEach(() => {
         mockGet.mockResolvedValueOnce({ data: { results: [
             {
@@ -59,7 +59,7 @@ xdescribe('Ejercitación Integradora - productsService', () => {
     });
 });
 
-xdescribe('OPCIONAL - productsService', () => {
+describe('OPCIONAL - productsService', () => {
     beforeEach(() => {
         mockGet.mockResolvedValueOnce({ data: { results: [
             {

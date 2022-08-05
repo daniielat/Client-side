@@ -5,7 +5,6 @@ const hydrate = require('nordic/hydrate');
 const { message } = window.__PRELOADED_STATE__; // Desestructuramos la prop y se la pasamos al componente
 
 
-
 hydrate(
     <ClaseView
         message = {message}
