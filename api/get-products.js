@@ -25,10 +25,10 @@ const router = require('nordic/ragnar').router();
 const Service = require('../services/productsService');
 
 router.get('/', (req, res) => {
-    const { offset, name } = req.query;
+    const { offset, name, limit } = req.query;
     const { siteId } = req.platform;
 
-    Service.getProducts(siteId, "phone", 10)
+    Service.getProducts(siteId, "tablet", 10, 5)
         .then(response => res.json(response))
         .catch(error => res.json(error))
 })
