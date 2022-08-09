@@ -18,7 +18,8 @@ const path = require('path');
 const entrypoints = {
   //nombre de la page y path
   clase:'./app/client/clase.js', //Agregar la ruta hacia el archivo. Cada page debe tener su entrypoint con su nombre y el path del archivo del client
-  products: './app/client/products.js' // Agregar la ruta hacia el archivo del client
+  products: './app/client/products.js', // Agregar la ruta hacia el archivo del client
+  productList: './app/client/productList.js'
 };
 
 const generateLegacyBundles = entryPoints => Object.keys(entryPoints).reduce((accumulator, entrypointName) => {

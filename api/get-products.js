@@ -26,9 +26,9 @@ const Service = require('../services/productsService');
 
 router.get('/', (req, res) => {
     const { offset, name, limit } = req.query;
-    const { siteId } = req.platform;
+    const siteId = req.platform.siteId;
 
-    Service.getProducts(siteId, "tablet", 10, 5)
+    Service.getProducts(siteId, name, limit, offset)
         .then(response => res.json(response))
         .catch(error => res.json(error))
 })

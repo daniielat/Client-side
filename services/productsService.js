@@ -40,13 +40,14 @@ const restClient = require('nordic/restclient')({
 
 // Crear la clase
 class ProductsService {
-  static getProducts(siteId, name , offset, limit){ // Crear el método estático que reciba los parámetros necesarios
-    return restClient.get(`/sites/${siteId}/search`, {params: {
+  static getProducts(siteId, name ,  limit, offset){ // Crear el método estático que reciba los parámetros necesarios
+/*     return restClient.get(`/sites/${siteId}/search`, {params: {
       q: name,
+      limit,
       offset,
-      limit
     }}
-    ) // Llamar el método get de restclient y agregarle la ruta
+    )  */// Llamar el método get de restclient y agregarle la ruta
+    return restClient.get(`/sites/${siteId}/search?q=${name}&limit=${limit}&offset=${offset}`)
       .then(response => normalizer(response.data.results)) // Guardar el resultado que retorna el then en response.data.results, de acuerdo a la necesidad
       .catch(error => ([]))
   }
